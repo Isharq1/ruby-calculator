@@ -26,9 +26,31 @@ if choice == "b"
   else
     puts "invalid operator"
   end
-  
+
 elsif choice == "a"
-  print "advance"
+  print "choose an operator"
+
+  op = gets.chomp()
+
+  if op == "p"
+    print "choice a number"
+
+    num1 = gets.chomp().to_f
+
+    print "choice another number"
+
+    num2 = gets.chomp().to_f
+    puts (num1**num2)
+  elsif op == "s"
+    print "choice a number"
+
+    num1 = gets.chomp().to_f
+
+    puts (Math.sqrt(num1))
+  else
+    puts "invalid operator"
+  end
+
 else
   print "invalid input"
 end
